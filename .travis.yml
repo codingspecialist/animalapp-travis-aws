@@ -23,9 +23,9 @@ notifications: # 4.
       - getinthere@naver.com
 
 before_deploy:
-  - zip -r animalapp *
+  - zip -r animalapp_test *
   - mkdir -p deploy
-  - mv animalapp.zip deploy/animalapp.zip
+  - mv animalapp_test.zip deploy/animalapp_test.zip
   - ls -l
 
 deploy:
@@ -36,14 +36,3 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
-
-  - provider: codedeploy
-    acess_key_id: $AWS_ACCESS_KEY
-    secret+access_key: $AWS_SECRET_KEY
-    bucket: animalapp
-    key: animalapp.zip
-    build_type: zip
-    application: rest-api
-    deployment_group: rest-api-group
-    region: ap-northeast-2
-    wait-until-deployed: true
