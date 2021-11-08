@@ -23,9 +23,9 @@ notifications: # 4.
       - getinthere@naver.com
 
 before_deploy:
-  - zip -r animalapp_test *
+  - zip -r animalapp *
   - mkdir -p deploy
-  - mv animalapp_test.zip deploy/animalapp_test.zip
+  - mv animalapp.zip deploy/animalapp.zip
   - ls -l
 
 deploy:
