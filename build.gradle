@@ -19,6 +19,11 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+// plain.jar 파일 생기지 않게 처리하기
+jar {
+	enabled = false 
+}
+
 test {
 	useJUnitPlatform()
 }

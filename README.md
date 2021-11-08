@@ -5,6 +5,13 @@
 - S3에 배포시에 코드 전체를 배포하는게 아니라 배포전에 zip파일로 압축해서 던진다.
 - zip파일로 압축해서 던진 파일을 codedeploy하게 되면 bundle_type에 맞게 자동으로 압축이 풀려서 배포된다.(새로운 기능)
 
+```gradle
+// plain.jar 파일 생기지 않게 처리하기
+jar {
+	enabled = false 
+}
+```
+
 ```yml
 git update-index --chmod=+x gradlew
 git ls-tree HEAD
