@@ -35,3 +35,14 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
+
+  - provider: codedeploy
+    acess_key_id: $AWS_ACCESS_KEY
+    secret+access_key: $AWS_SECRET_KEY
+    bucket: animalapp
+    key: animalapp.zip
+    build_type: zip
+    application: rest-api
+    deployment_group: rest-api-group
+    region: ap-northeast-2
+    wait-until-deployed: true
