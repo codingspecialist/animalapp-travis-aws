@@ -45,7 +45,7 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     bucket: animalapp
     key: animalapp.zip
-    bundle_type: zip
+    bundle_type: zip # 번들 타입만 지정되면 자동으로 압축 풀림
     application: rest-api
     deployment_group: rest-api-group
     region: ap-northeast-2
