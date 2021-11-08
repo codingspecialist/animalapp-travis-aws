@@ -26,12 +26,12 @@ before_deploy:
   - zip -r animalapp *
   - mkdir -p deploy
   - mv animalapp.zip deploy/animalapp.zip
-  - ls -l
 
 deploy:
+  # S3배포는 잘 완료됨!!
   - provider: s3
     acess_key_id: $AWS_ACCESS_KEY
-    secret+access_key: $AWS_SECRET_KEY
+    secret_access_key: $AWS_SECRET_KEY
     bucket: animalapp
     region: ap-northeast-2
     skip_cleanup: true
@@ -39,13 +39,13 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
-
+  # EC2배포에서 막힘.
   - provider: codedeploy
     acess_key_id: $AWS_ACCESS_KEY
-    secret+access_key: $AWS_SECRET_KEY
+    secret_access_key: $AWS_SECRET_KEY
     bucket: animalapp
     key: animalapp.zip
-    build_type: zip
+    bundle_type: zip
     application: rest-api
     deployment_group: rest-api-group
     region: ap-northeast-2
