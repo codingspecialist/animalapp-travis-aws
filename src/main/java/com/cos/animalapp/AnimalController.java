@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AnimalController {
   
 	@GetMapping("/")
-	public String home2() {
+	public String home() {
 		return "home";
 	}
 	
