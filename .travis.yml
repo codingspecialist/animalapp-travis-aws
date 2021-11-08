@@ -1,0 +1,37 @@
+language: java
+jdk:
+  - openjdk11
+
+branches: # 1.
+  only:
+    - master
+
+before_install:
+  - chmod +x gradlew
+
+# Travis CI 서버의 Home
+cache: # 2.
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+script: "./gradlew clean build" # 3.
+
+# CI 실행 완료 시 메일 알람
+notifications: # 4.
+  email:
+    recipients:
+      - getinthere@naver.com
+
+before_deploy:
+  - zip -r animalapp *
+  - mkdir -p deploy
+  - mv animalapp.zip deploy/animalapp.zip
+
+deploy:
+  - provider: s3
+    acess_key_id: $AWS_ACCESS_KEY
+    secret+access_key: $AWS_SECRET_KEY
+    bucket: animalapp
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
