@@ -26,6 +26,7 @@ before_deploy:
   - zip -r animalapp *
   - mkdir -p deploy
   - mv animalapp.zip deploy/animalapp.zip
+  - ls -l
 
 deploy:
   - provider: s3
