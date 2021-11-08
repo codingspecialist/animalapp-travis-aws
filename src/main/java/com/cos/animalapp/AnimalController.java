@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AnimalController {
-
+  
 	@GetMapping("/")
-	public String home() {
+	public String home2() {
 		return "home";
 	}
 	
