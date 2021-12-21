@@ -1,5 +1,5 @@
 
-![blog](https://postfiles.pstatic.net/MjAyMTEyMjFfNDIg/MDAxNjQwMDc3ODQ1NjI3.E2EKQ8_xdv7Woclhq5nerAwC0815DtbkTXLhIraIqwEg.swSqKiM0n-ZRWQSTFfjzdfYhT-3muMwmx24dDZSSRzwg.PNG.getinthere/Screenshot_18.png)
+![blog](https://postfiles.pstatic.net/MjAyMTEyMjFfNDIg/MDAxNjQwMDc3ODQ1NjI3.E2EKQ8_xdv7Woclhq5nerAwC0815DtbkTXLhIraIqwEg.swSqKiM0n-ZRWQSTFfjzdfYhT-3muMwmx24dDZSSRzwg.PNG.getinthere/Screenshot_18.png?type=w773)
 
 ### 실행 흐름
 - github 코드 배포
