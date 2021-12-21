@@ -1,4 +1,5 @@
-### 권한문제 해결
+
+https://postfiles.pstatic.net/MjAyMTEyMjFfNDIg/MDAxNjQwMDc3ODQ1NjI3.E2EKQ8_xdv7Woclhq5nerAwC0815DtbkTXLhIraIqwEg.swSqKiM0n-ZRWQSTFfjzdfYhT-3muMwmx24dDZSSRzwg.PNG.getinthere/Screenshot_18.png?type=w773)
 
 ### 실행 흐름
 - github 코드 배포
@@ -12,11 +13,12 @@
 - 위 태그명을 나중에 codedeploy에서 그룹 배포시 참고해야 한다.
 
 ### IAM 사용자 설정 (외부 프로그램에서 접근할 때)
-- AmazonS3FullAccess, AWSCodeDeployFullAccess
-- AmazonEC2RoleforAWS-CodeDeploy (설정 후 EC2 재시작)
+- AmazonS3FullAccess
+- AWSCodeDeployFullAccess
 
 ### IAM 역할 설정 (내부 프로그램에서 접근할 때)
-- AWSCodeDeployRole
+- AWSCodeDeployRole   - 코드 디플로이
+- AmazonEC2RoleforAWS - 이시투
 
 ### CI/CD 배포시 주의할점
 - ec2의 태그명과 codedeploy의 배포그룹 설정시 태그명이 일치하기만 하면 된다.
